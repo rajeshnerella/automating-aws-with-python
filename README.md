@@ -12,3 +12,4 @@ webotron currently has the following options:
 
 - List buckets
 - list contents of a bucket
+- Create and setup bucket
