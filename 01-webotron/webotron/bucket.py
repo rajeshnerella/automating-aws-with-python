@@ -36,7 +36,7 @@ class BucketManager:
     def get_region_name(self, bucket):
         """Get the bucket's region name."""
         client = self.s3.meta.client
-        bucket_location = self.s3.meta.client.get_bucket_location(Bucket=bucket.name)
+        bucket_location = client.get_bucket_location(Bucket=bucket.name)
 
         return bucket_location["LocationConstraint"] or 'us-east-1'
 
