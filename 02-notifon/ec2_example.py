@@ -43,7 +43,7 @@ inst.security_groups
 # Look up the security group
 # Authorize incoming connections from our public IP address, on port 22 (the port SSH uses)
 sg = ec2.SecurityGroup(inst.security_groups[0]['GroupId'])
-sg.authorize_ingress(IpPermissions=[{'FromPort': 22, 'ToPort': 22, 'IpProtocol': 'TCP', 'IpRanges': [{'CidrIp': '162.233.171.126/32'}]}])
+sg.authorize_ingress(IpPermissions=[{'FromPort': 22, 'ToPort': 22, 'IpProtocol': 'TCP', 'IpRanges': [{'CidrIp': '174.114.237.90/32'}]}])
 sg.authorize_ingress(IpPermissions=[{'FromPort': 80, 'ToPort': 80, 'IpProtocol': 'TCP', 'IpRanges': [{'CidrIp': '0.0.0.0/0'}]}])
 inst.public_dns_name
 get_ipython().run_line_magic('history', '')
